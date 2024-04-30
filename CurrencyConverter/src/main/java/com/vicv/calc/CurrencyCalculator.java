@@ -3,13 +3,16 @@ package com.vicv.calc;
 import com.vicv.dto.ExchangeRateDTO;
 import com.vicv.http.ExchangeRateClient;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class CurrencyCalculator {
     public static Double calculateConversion (String baseCurrencyCode, String targetCurrencyCode, double amount){
         Double convertedValue = null;
 
         try{
             ExchangeRateClient apiConnection = new ExchangeRateClient(baseCurrencyCode, targetCurrencyCode);
-            ExchangeRateDTO response = apiConnection.Request();
+            ExchangeRateDTO response = apiConnection.getRequest();
             //System.out.println(response);
             convertedValue = CurrencyCalculator.calculateExchange(amount, response.conversionRate());
             //System.out.println(convertedValue);
@@ -24,4 +27,5 @@ public class CurrencyCalculator {
         String result = String.format("%.2f", amount * conversionRate);
         return Double.valueOf(result.replace(",", "."));
     }
+
 }
