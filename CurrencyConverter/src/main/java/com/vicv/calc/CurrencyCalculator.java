@@ -2,28 +2,31 @@ package com.vicv.calc;
 
 import com.vicv.dto.ExchangeRateDTO;
 import com.vicv.http.ExchangeRateClient;
+import com.vicv.model.CurrencyConversion;
+import com.vicv.util.CurrencyCode;
 
+import java.time.LocalDateTime;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CurrencyCalculator {
-    public static Double calculateConversion (String baseCurrencyCode, String targetCurrencyCode, double amount){
-        Double convertedValue = null;
+    public static CurrencyConversion calculateConversion (String baseCurrencyCode, String targetCurrencyCode, double amount){
+        double conversionResult;
+        CurrencyConversion conversion = null;
 
         try{
             ExchangeRateClient apiConnection = new ExchangeRateClient(baseCurrencyCode, targetCurrencyCode);
             ExchangeRateDTO response = apiConnection.getRequest();
-            //System.out.println(response);
-            convertedValue = CurrencyCalculator.calculateExchange(amount, response.conversionRate());
-            //System.out.println(convertedValue);
+            conversionResult = CurrencyCalculator.calculateExchange(amount, response.conversionRate());
+            conversion = new CurrencyConversion(CurrencyCode.valueOf(response.baseCode()), CurrencyCode.valueOf(response.targetCode()), conversionResult, response.conversionRate(), LocalDateTime.now());
         }
         catch(Exception e){
             System.out.println(e);
         }
 
-        return convertedValue;
+        return conversion;
     }
-    public static Double calculateExchange(double amount, double conversionRate){
+    public static double calculateExchange(double amount, double conversionRate){
         String result = String.format("%.2f", amount * conversionRate);
         return Double.valueOf(result.replace(",", "."));
     }

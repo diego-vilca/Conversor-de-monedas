@@ -1,6 +1,7 @@
 package com.vicv.gui.controller;
 
 import com.vicv.calc.CurrencyCalculator;
+import com.vicv.model.CurrencyConversion;
 import com.vicv.util.CurrencyCode;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -50,9 +51,10 @@ public class ConverterGUIController implements Initializable {
         double amount = Double.valueOf(this.txtAmount.getText());
         String baseCurrency = getCurrencyCodeFromGUI(cbxBaseCurrency.getValue());
         String targetCurrency = getCurrencyCodeFromGUI(cbxTargetCurrency.getValue());
-        Double result = CurrencyCalculator.calculateConversion(baseCurrency, targetCurrency, amount);
+        CurrencyConversion conversionResult = CurrencyCalculator.calculateConversion(baseCurrency, targetCurrency, amount);
 
-        this.txtResult.setText("$" + result);
+        this.txtResult.setText("$" + conversionResult.getConversionResult());
+        System.out.println(conversionResult);
     }
 
     private void setupComboBox(){
