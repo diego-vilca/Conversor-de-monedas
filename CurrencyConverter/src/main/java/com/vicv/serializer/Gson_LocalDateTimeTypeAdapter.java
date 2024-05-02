@@ -1,4 +1,4 @@
-package com.vicv.util;
+package com.vicv.serializer;
 
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;

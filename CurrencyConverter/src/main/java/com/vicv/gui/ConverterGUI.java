@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class ConverterGUI extends Application {
     @Override
     public void start(Stage stage) {
@@ -14,10 +16,9 @@ public class ConverterGUI extends Application {
             stage.setTitle("Currency Converter");
             stage.setScene(new Scene(root,600,400));
             stage.show();
-        }
-        catch(Exception e){
-            System.out.println(e);
-        }
 
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

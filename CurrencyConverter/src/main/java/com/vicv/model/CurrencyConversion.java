@@ -1,16 +1,16 @@
 package com.vicv.model;
 
 import com.google.gson.annotations.SerializedName;
-import com.vicv.util.CurrencyCode;
+import com.vicv.util.CurrencyCodes;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public class CurrencyConversion implements Serializable {
     @SerializedName("base_currency")
-    private final CurrencyCode baseCurrency;
+    private final CurrencyCodes baseCurrency;
     @SerializedName("target_currency")
-    private final CurrencyCode targetCurrency;
+    private final CurrencyCodes targetCurrency;
     @SerializedName("exchange_rate")
     private final double exchangeRate;
     @SerializedName("conversion_result")
@@ -18,7 +18,7 @@ public class CurrencyConversion implements Serializable {
     @SerializedName("conversion_time")
     private final LocalDateTime conversionTime;
 
-    public CurrencyConversion(CurrencyCode baseCurrency, CurrencyCode targetCurrency, double conversionResult, double exchangeRate, LocalDateTime conversionTime){
+    public CurrencyConversion(CurrencyCodes baseCurrency, CurrencyCodes targetCurrency, double conversionResult, double exchangeRate, LocalDateTime conversionTime){
         this.baseCurrency = baseCurrency;
         this.targetCurrency = targetCurrency;
         this.conversionResult = conversionResult;
@@ -26,10 +26,10 @@ public class CurrencyConversion implements Serializable {
         this.conversionTime = conversionTime;
     }
 
-    public CurrencyCode getBaseCurrency() {
+    public CurrencyCodes getBaseCurrency() {
         return this.baseCurrency;
     }
-    public CurrencyCode getTargetCurrency() {
+    public CurrencyCodes getTargetCurrency() {
         return this.targetCurrency;
     }
     public double getExchangeRate() {

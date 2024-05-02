@@ -1,9 +1,10 @@
-package com.vicv.util;
+package com.vicv.serializer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.vicv.model.CurrencyConversion;
+import com.vicv.util.CommonConstants;
 
 import java.io.*;
 import java.lang.reflect.Type;

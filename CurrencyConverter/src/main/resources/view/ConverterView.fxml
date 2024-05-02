@@ -10,19 +10,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vicv.gui.controller.ConverterGUIController">
+<AnchorPane fx:id="apConverter" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vicv.gui.controller.ConverterViewController">
    <children>
       <Pane prefHeight="400.0" prefWidth="300.0">
          <children>
-            <Label fx:id="lblTargetCurrency" layoutX="78.0" layoutY="229.0" text="To" />
-            <Label fx:id="lblAmount" layoutX="77.0" layoutY="111.0" text="Amount" />
-            <TextField fx:id="txtAmount" layoutX="150.0" layoutY="107.0" prefHeight="25.0" prefWidth="98.0" promptText="0.0000" />
-            <Label fx:id="lblBaseCurrency" layoutX="77.0" layoutY="159.0" text="From" />
-            <ComboBox fx:id="cbxTargetCurrency" layoutX="75.0" layoutY="255.0" prefHeight="25.0" prefWidth="171.0" />
-            <ComboBox fx:id="cbxBaseCurrency" layoutX="75.0" layoutY="188.0" prefHeight="25.0" prefWidth="171.0" />
-            <Button fx:id="btnConvertCurrency" layoutX="75.0" layoutY="326.0" mnemonicParsing="false" onAction="#onConvertCurrencyButtonClicked" prefHeight="25.0" prefWidth="77.0" text="Convert" />
-            <TextField fx:id="txtResult" editable="false" layoutX="169.0" layoutY="326.0" prefHeight="25.0" prefWidth="77.0" promptText="Result" />
-            <Label fx:id="lblTittle" layoutX="233.0" layoutY="35.0" text="CURRENCY CONVERTER" />
+            <Label fx:id="lblTargetCurrency" layoutX="77.0" layoutY="218.0" text="To" />
+            <Label fx:id="lblAmount" layoutX="77.0" layoutY="103.0" text="Amount" />
+            <TextField fx:id="txtAmount" layoutX="150.0" layoutY="99.0" prefHeight="25.0" prefWidth="98.0" promptText="0.0000" />
+            <Label fx:id="lblBaseCurrency" layoutX="77.0" layoutY="152.0" text="From" />
+            <ComboBox fx:id="cbxTargetCurrency" layoutX="75.0" layoutY="243.0" prefHeight="25.0" prefWidth="171.0" />
+            <ComboBox fx:id="cbxBaseCurrency" layoutX="75.0" layoutY="175.0" prefHeight="25.0" prefWidth="171.0" />
+            <Button fx:id="btnConvertCurrency" layoutX="75.0" layoutY="314.0" mnemonicParsing="false" onAction="#onConvertCurrencyButtonClicked" prefHeight="25.0" prefWidth="77.0" text="Convert" />
+            <TextField fx:id="txtResult" editable="false" layoutX="169.0" layoutY="314.0" prefHeight="25.0" prefWidth="77.0" promptText="Result" />
          </children>
       </Pane>
       <LineChart layoutX="300.0" layoutY="98.0" prefHeight="204.0" prefWidth="258.0">
@@ -33,6 +32,7 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </LineChart>
-      <Button fx:id="btnLog" layoutX="391.0" layoutY="325.0" mnemonicParsing="false" text="Log History" />
+      <Button fx:id="btnLog" layoutX="390.0" layoutY="313.0" mnemonicParsing="false" onAction="#onLogButtonClicked" text="Log History" />
+      <Label fx:id="lblTittle" layoutX="236.0" layoutY="41.0" text="CURRENCY CONVERTER" />
    </children>
 </AnchorPane>

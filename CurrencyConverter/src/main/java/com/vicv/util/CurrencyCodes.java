@@ -1,5 +1,5 @@
 package com.vicv.util;
-public enum CurrencyCode {
+public enum CurrencyCodes {
     AED("UAE Dirham"),
     AFN("Afghan Afghani"),
     ALL("Albanian Lek"),
@@ -164,7 +164,7 @@ public enum CurrencyCode {
 
     private final String description;
 
-    CurrencyCode(String description) {
+    CurrencyCodes(String description) {
         this.description = description;
     }
 
