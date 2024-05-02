@@ -2,7 +2,9 @@ package com.vicv.gui.controller;
 
 import com.vicv.calc.CurrencyCalculator;
 import com.vicv.model.CurrencyConversion;
+import com.vicv.util.CommonConstants;
 import com.vicv.util.CurrencyCode;
+import com.vicv.util.CurrencyConversionSerializer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -53,8 +55,8 @@ public class ConverterGUIController implements Initializable {
         String targetCurrency = getCurrencyCodeFromGUI(cbxTargetCurrency.getValue());
         CurrencyConversion conversionResult = CurrencyCalculator.calculateConversion(baseCurrency, targetCurrency, amount);
 
+        CurrencyConversionSerializer.serialize(conversionResult, CommonConstants.JSON_FILE_PATH);
         this.txtResult.setText("$" + conversionResult.getConversionResult());
-        System.out.println(conversionResult);
     }
 
     private void setupComboBox(){

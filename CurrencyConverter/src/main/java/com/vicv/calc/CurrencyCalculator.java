@@ -12,19 +12,18 @@ import java.util.regex.Pattern;
 public class CurrencyCalculator {
     public static CurrencyConversion calculateConversion (String baseCurrencyCode, String targetCurrencyCode, double amount){
         double conversionResult;
-        CurrencyConversion conversion = null;
 
         try{
             ExchangeRateClient apiConnection = new ExchangeRateClient(baseCurrencyCode, targetCurrencyCode);
             ExchangeRateDTO response = apiConnection.getRequest();
             conversionResult = CurrencyCalculator.calculateExchange(amount, response.conversionRate());
-            conversion = new CurrencyConversion(CurrencyCode.valueOf(response.baseCode()), CurrencyCode.valueOf(response.targetCode()), conversionResult, response.conversionRate(), LocalDateTime.now());
+
+            return new CurrencyConversion(CurrencyCode.valueOf(response.baseCode()), CurrencyCode.valueOf(response.targetCode()), conversionResult, response.conversionRate(), LocalDateTime.now());
         }
         catch(Exception e){
             System.out.println(e);
+            throw new RuntimeException(e);
         }
-
-        return conversion;
     }
     public static double calculateExchange(double amount, double conversionRate){
         String result = String.format("%.2f", amount * conversionRate);

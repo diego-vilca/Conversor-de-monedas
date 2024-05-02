@@ -1,16 +1,22 @@
 package com.vicv.model;
 
+import com.google.gson.annotations.SerializedName;
 import com.vicv.util.CurrencyCode;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public class CurrencyConversion implements Serializable {
-    private CurrencyCode baseCurrency;
-    private CurrencyCode targetCurrency;
-    private double exchangeRate;
-    private double conversionResult;
-    private LocalDateTime conversionTime;
+    @SerializedName("base_currency")
+    private final CurrencyCode baseCurrency;
+    @SerializedName("target_currency")
+    private final CurrencyCode targetCurrency;
+    @SerializedName("exchange_rate")
+    private final double exchangeRate;
+    @SerializedName("conversion_result")
+    private final double conversionResult;
+    @SerializedName("conversion_time")
+    private final LocalDateTime conversionTime;
 
     public CurrencyConversion(CurrencyCode baseCurrency, CurrencyCode targetCurrency, double conversionResult, double exchangeRate, LocalDateTime conversionTime){
         this.baseCurrency = baseCurrency;
