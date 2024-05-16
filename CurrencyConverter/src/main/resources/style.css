@@ -1,0 +1,21 @@
+.root {
+    -fx-background-color: linear-gradient(#8BC6EC 0%, #9599E2 100%);
+}
+
+.table-view .table-column {
+    -fx-alignment: CENTER-RIGHT;
+}
+
+#colDate {
+    -fx-alignment: CENTER;
+}
+
+#colAmount, #colResult {
+    -fx-alignment: CENTER-LEFT;
+}
+/*
+#apConverter, #apLog{
+    -fx-background-radius: 0 0 18 18;
+}
+*/
+

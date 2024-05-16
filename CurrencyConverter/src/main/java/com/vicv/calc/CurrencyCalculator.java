@@ -17,7 +17,8 @@ public class CurrencyCalculator {
             apiClient apiConnection = new apiClient(baseCurrencyCode, targetCurrencyCode);
             ExchangeRateDTO response = apiConnection.getRequest();
             conversionResult = CurrencyCalculator.calculateExchange(amount, response.conversionRate());
-            conversionTime = formatDateTime(LocalDateTime.now(), "dd-MM-yyyy HH:mm:ss");
+//            conversionTime = formatDateTime(LocalDateTime.now(), "dd-MM-yyyy HH:mm:ss");
+            conversionTime = LocalDateTime.now();
             return new CurrencyConversion(CurrencyCodes.valueOf(response.baseCode()), CurrencyCodes.valueOf(response.targetCode()), conversionResult, response.conversionRate(), conversionTime);
         }
         catch(Exception e){
@@ -29,13 +30,14 @@ public class CurrencyCalculator {
         String result = String.format("%.2f", amount * conversionRate);
         return Double.valueOf(result.replace(",", "."));
     }
-    public static LocalDateTime formatDateTime(LocalDateTime dateTime, String pattern) {
+    public static String formatDateTime(LocalDateTime dateTime, String pattern) {
         // Create a date and time formatter with the specified pattern.
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
 
         // Format the LocalDateTime using the formatter and convert it back to LocalDateTime.
         String formattedDateTimeStr = dateTime.format(formatter);
-        return LocalDateTime.parse(formattedDateTimeStr, formatter);
+
+        return formattedDateTimeStr;
     }
 
 }

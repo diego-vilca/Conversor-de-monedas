@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="apLog" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vicv.gui.controller.LogViewController">
    <children>
-      <Button fx:id="btnBackToPrincipal" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#onBackButtonClicked" text="Back" />
+      <Button fx:id="btnBackToPrincipal" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBackButtonClicked" text="Back" />
+      <TableView fx:id="tblConversionLog" layoutX="9.0" layoutY="62.0" prefHeight="295.0" prefWidth="579.0">
+        <columns>
+            <TableColumn fx:id="colDate" prefWidth="140.0" text="Conversion Date" />
+            <TableColumn fx:id="colBaseCurrency" prefWidth="114.0" text="Currency" />
+            <TableColumn fx:id="colTargetCurrency" prefWidth="114.0" text="Target Currency" />
+            <TableColumn fx:id="colAmount" prefWidth="100.0" text="Amount" />
+            <TableColumn fx:id="colResult" prefWidth="108.66668701171875" text="Conversion Result" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

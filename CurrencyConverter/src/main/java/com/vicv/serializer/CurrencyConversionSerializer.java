@@ -29,7 +29,7 @@ public class CurrencyConversionSerializer {
         }
     }
 
-    private static List<CurrencyConversion> readFromJson() {
+    public static List<CurrencyConversion> readFromJson() {
         List<CurrencyConversion> conversions = new ArrayList<>();
 
         try (Reader reader = new FileReader(CommonConstants.JSON_FILE_PATH)) {

@@ -47,9 +47,11 @@ public class ConverterViewController implements Initializable {
     private Label lblBaseCurrency;
     @FXML
     private ComboBox cbxBaseCurrency;
+    private ObservableList<String> obsList;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        obsList = FXCollections.observableArrayList();
         setupComboBox();
     }
 
@@ -64,16 +66,15 @@ public class ConverterViewController implements Initializable {
         this.txtResult.setText("$" + conversionResult.getConversionResult());
     }
 
-    private void setupComboBox(){
+    private void setupComboBox() {
         loadCbxItems();
         setCbxDefaultValue(this.cbxBaseCurrency, CurrencyCodes.USD);
         setCbxDefaultValue(this.cbxTargetCurrency, CurrencyCodes.ARS);
     }
 
-    private void loadCbxItems(){
-        ObservableList<String> obsList = FXCollections.observableArrayList();
+    private void loadCbxItems() {
 
-        for(CurrencyCodes item : CurrencyCodes.values() ){
+        for (CurrencyCodes item : CurrencyCodes.values()) {
             obsList.add(item + " - " + item.getDescription());
         }
 
@@ -81,7 +82,7 @@ public class ConverterViewController implements Initializable {
         this.cbxTargetCurrency.getItems().setAll(obsList);
     }
 
-    private void setCbxDefaultValue(ComboBox<String> cbx, CurrencyCodes code){
+    private void setCbxDefaultValue(ComboBox<String> cbx, CurrencyCodes code) {
         cbx.getSelectionModel().select(code.ordinal());
     }
 
