@@ -1,6 +1,6 @@
-package com.vicv.app;
+package com.diegovilca.app;
 
-import com.vicv.gui.ConverterGUI;
+import com.diegovilca.gui.ConverterGUI;
 import javafx.application.Application;
 
 public class Main {

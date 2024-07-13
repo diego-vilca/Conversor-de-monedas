@@ -1,9 +1,9 @@
-package com.vicv.calc;
+package com.diegovilca.calc;
 
-import com.vicv.dto.ExchangeRateDTO;
-import com.vicv.http.apiClient;
-import com.vicv.model.CurrencyConversion;
-import com.vicv.util.CurrencyCodes;
+import com.diegovilca.dto.ExchangeRateDTO;
+import com.diegovilca.http.apiClient;
+import com.diegovilca.model.CurrencyConversion;
+import com.diegovilca.util.CurrencyCodes;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

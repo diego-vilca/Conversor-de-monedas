@@ -1,10 +1,9 @@
-package com.vicv.gui;
+package com.diegovilca.gui;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class SceneSwitch {
     public SceneSwitch(AnchorPane currentAnchorPane, String xfmlPath) {

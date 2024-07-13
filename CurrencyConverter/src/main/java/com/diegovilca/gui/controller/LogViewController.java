@@ -1,9 +1,9 @@
-package com.vicv.gui.controller;
+package com.diegovilca.gui.controller;
 
-import com.vicv.calc.CurrencyCalculator;
-import com.vicv.gui.SceneSwitch;
-import com.vicv.model.CurrencyConversion;
-import com.vicv.serializer.CurrencyConversionSerializer;
+import com.diegovilca.calc.CurrencyCalculator;
+import com.diegovilca.gui.SceneSwitch;
+import com.diegovilca.model.CurrencyConversion;
+import com.diegovilca.serializer.CurrencyConversionSerializer;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,7 +19,7 @@ import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
-import static com.vicv.util.CommonConstants.*;
+import static com.diegovilca.util.CommonConstants.*;
 
 public class LogViewController implements Initializable {
     @FXML

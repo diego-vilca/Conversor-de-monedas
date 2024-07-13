@@ -1,11 +1,11 @@
-package com.vicv.gui.controller;
+package com.diegovilca.gui.controller;
 
-import com.vicv.calc.CurrencyCalculator;
-import com.vicv.gui.SceneSwitch;
-import com.vicv.model.CurrencyConversion;
-import com.vicv.util.CommonConstants;
-import com.vicv.util.CurrencyCodes;
-import com.vicv.serializer.CurrencyConversionSerializer;
+import com.diegovilca.calc.CurrencyCalculator;
+import com.diegovilca.gui.SceneSwitch;
+import com.diegovilca.model.CurrencyConversion;
+import com.diegovilca.util.CommonConstants;
+import com.diegovilca.util.CurrencyCodes;
+import com.diegovilca.serializer.CurrencyConversionSerializer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

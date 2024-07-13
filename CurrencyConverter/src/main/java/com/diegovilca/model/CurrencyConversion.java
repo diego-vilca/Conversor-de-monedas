@@ -1,7 +1,7 @@
-package com.vicv.model;
+package com.diegovilca.model;
 
 import com.google.gson.annotations.SerializedName;
-import com.vicv.util.CurrencyCodes;
+import com.diegovilca.util.CurrencyCodes;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;

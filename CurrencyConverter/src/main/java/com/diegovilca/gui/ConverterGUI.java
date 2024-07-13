@@ -1,4 +1,4 @@
-package com.vicv.gui;
+package com.diegovilca.gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

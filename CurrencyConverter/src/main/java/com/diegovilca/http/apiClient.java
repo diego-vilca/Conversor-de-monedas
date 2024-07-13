@@ -1,10 +1,10 @@
-package com.vicv.http;
+package com.diegovilca.http;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.vicv.dto.ExchangeRateDTO;
-import com.vicv.util.CommonConstants;
+import com.diegovilca.dto.ExchangeRateDTO;
+import com.diegovilca.util.CommonConstants;
 
 import java.io.IOException;
 import java.net.URI;

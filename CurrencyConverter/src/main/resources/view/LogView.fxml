@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="apLog" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vicv.gui.controller.LogViewController">
+<AnchorPane fx:id="apLog" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.diegovilca.gui.controller.LogViewController">
    <children>
       <Button fx:id="btnBackToPrincipal" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBackButtonClicked" text="Back" />
       <TableView fx:id="tblConversionLog" layoutX="9.0" layoutY="62.0" prefHeight="295.0" prefWidth="579.0">

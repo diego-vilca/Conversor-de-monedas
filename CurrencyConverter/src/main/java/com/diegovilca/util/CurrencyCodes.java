@@ -1,4 +1,4 @@
-package com.vicv.util;
+package com.diegovilca.util;
 public enum CurrencyCodes {
     AED("UAE Dirham"),
     AFN("Afghan Afghani"),
