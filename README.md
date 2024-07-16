@@ -22,7 +22,7 @@ Este proyecto permite convertir un tipo de moneda a otra a partir de la selecci√
 Para utilizar el programa debes descargar el archivo.zip o clonar el proyecto a la ubicaci√≥n que desees:
 
 ```bash
-  git clone https://github.com/diego-vilca/Conversor-de-monedas
+  git clone https://github.com/diego-vilca/Conversor-de-monedas.git
 ```
 
 Para correr este proyecto, necesitaras agregar la siguiente variable de entorno a tu sistema.
