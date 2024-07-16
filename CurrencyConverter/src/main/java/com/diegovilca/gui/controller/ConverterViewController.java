@@ -57,12 +57,20 @@ public class ConverterViewController implements Initializable {
 
     @FXML
     public void onConvertCurrencyButtonClicked(ActionEvent actionEvent) {
-        double amount = Double.valueOf(this.txtAmount.getText());
+        Double amount = 0.0;
+        try {
+            amount = Double.valueOf(this.txtAmount.getText());
+        }catch (NumberFormatException e){
+            System.out.println("Ingrese un número válido.");
+        }
+
         String baseCurrency = getCurrencyCodeFromGUI((String) cbxBaseCurrency.getValue());
         String targetCurrency = getCurrencyCodeFromGUI((String) cbxTargetCurrency.getValue());
         CurrencyConversion conversionResult = CurrencyCalculator.calculateConversion(baseCurrency, targetCurrency, amount);
 
-        CurrencyConversionSerializer.serialize(conversionResult, CommonConstants.JSON_FILE_PATH);
+        if (conversionResult.getConversionResult() != 0.0){
+            CurrencyConversionSerializer.serialize(conversionResult, CommonConstants.JSON_FILE_PATH);
+        }
         this.txtResult.setText("$" + conversionResult.getConversionResult());
     }
 

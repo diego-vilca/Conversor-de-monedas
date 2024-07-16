@@ -1,0 +1,100 @@
+[
+  {
+    "base_currency": "USD",
+    "target_currency": "ARS",
+    "exchange_rate": 921.75,
+    "conversion_result": 138262.5,
+    "conversion_time": "14-07-2024 09:01:11"
+  },
+  {
+    "base_currency": "MVR",
+    "target_currency": "HRK",
+    "exchange_rate": 0.4502,
+    "conversion_result": 900.4,
+    "conversion_time": "14-07-2024 09:01:25"
+  },
+  {
+    "base_currency": "USD",
+    "target_currency": "ARS",
+    "exchange_rate": 921.75,
+    "conversion_result": 138262.5,
+    "conversion_time": "14-07-2024 09:05:54"
+  },
+  {
+    "base_currency": "ZAR",
+    "target_currency": "CLP",
+    "exchange_rate": 50.7725,
+    "conversion_result": 101545.0,
+    "conversion_time": "14-07-2024 09:06:11"
+  },
+  {
+    "base_currency": "USD",
+    "target_currency": "ARS",
+    "exchange_rate": 922.92,
+    "conversion_result": 0.0,
+    "conversion_time": "16-07-2024 07:24:59"
+  },
+  {
+    "base_currency": "USD",
+    "target_currency": "ARS",
+    "exchange_rate": 922.92,
+    "conversion_result": 0.0,
+    "conversion_time": "16-07-2024 07:25:14"
+  },
+  {
+    "base_currency": "USD",
+    "target_currency": "ARS",
+    "exchange_rate": 922.92,
+    "conversion_result": 0.0,
+    "conversion_time": "16-07-2024 07:25:38"
+  },
+  {
+    "base_currency": "USD",
+    "target_currency": "ARS",
+    "exchange_rate": 922.92,
+    "conversion_result": 0.0,
+    "conversion_time": "16-07-2024 07:26:04"
+  },
+  {
+    "base_currency": "USD",
+    "target_currency": "ARS",
+    "exchange_rate": 922.92,
+    "conversion_result": 0.0,
+    "conversion_time": "16-07-2024 07:27:17"
+  },
+  {
+    "base_currency": "USD",
+    "target_currency": "ARS",
+    "exchange_rate": 922.92,
+    "conversion_result": 0.0,
+    "conversion_time": "16-07-2024 07:27:52"
+  },
+  {
+    "base_currency": "USD",
+    "target_currency": "ARS",
+    "exchange_rate": 922.92,
+    "conversion_result": 0.0,
+    "conversion_time": "16-07-2024 07:28:09"
+  },
+  {
+    "base_currency": "USD",
+    "target_currency": "ARS",
+    "exchange_rate": 922.92,
+    "conversion_result": 0.0,
+    "conversion_time": "16-07-2024 07:29:29"
+  },
+  {
+    "base_currency": "USD",
+    "target_currency": "ARS",
+    "exchange_rate": 922.92,
+    "conversion_result": 0.0,
+    "conversion_time": "16-07-2024 07:29:36"
+  },
+  {
+    "base_currency": "USD",
+    "target_currency": "ARS",
+    "exchange_rate": 922.92,
+    "conversion_result": 4.6146E7,
+    "conversion_time": "16-07-2024 07:32:51"
+  }
+]
